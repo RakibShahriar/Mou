@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Question ❤️</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="page13-body">
+
+    <div class="page13-container">
+
+        <!-- Question at the top -->
+        <div class="page13-question">
+            Will you be the one to complete half of my Deen?
+        </div>
+
+        <div class="page13-scene">
+
+            <svg viewBox="0 0 800 480" xmlns="http://www.w3.org/2000/svg">
+
+                <!-- BOY: head -->
+                <path class="draw-line boy-line"
+                    d="M245 105
+                       C245 65 275 45 305 60
+                       C335 75 340 115 315 140
+                       C290 160 255 140 245 105Z"/>
+
+                <!-- Boy hair -->
+                <path class="draw-line boy-line"
+                    d="M248 95 Q255 45 300 55 Q325 55 337 90"/>
+
+                <!-- Boy beard -->
+                <path class="draw-line boy-line"
+                    d="M250 112
+                       Q255 135 275 145
+                       Q295 158 315 140
+                       Q330 125 330 105
+                       Q320 120 305 122
+                       Q285 130 270 120
+                       Q258 116 250 112Z"/>
+
+                <!-- Boy neck -->
+                <path class="draw-line boy-line"
+                    d="M280 145 L280 170 M310 145 L310 170"/>
+
+                <!-- Boy body -->
+                <path class="draw-line boy-line"
+                    d="M250 175
+                       Q280 160 315 175
+                       L345 300
+                       L335 330
+                       L235 330
+                       L220 300Z"/>
+
+                <!-- Boy legs -->
+                <path class="draw-line boy-line"
+                    d="M245 325 L240 430 L225 445
+                       M320 325 L325 430 L340 445"/>
+
+                <!-- Boy arms -->
+                <path class="draw-line boy-line"
+                    d="M250 185 L210 250 L290 260"/>
+
+                <path class="draw-line boy-line"
+                    d="M315 185 L365 240 L420 235"/>
+
+                <!-- Ring in boy's hand -->
+                <circle class="draw-line ring"
+                    cx="425" cy="225" r="13"/>
+
+                <path class="draw-line ring"
+                    d="M420 210 L425 202 L430 210"/>
+
+                <!-- GIRL: slimmer hijab outer shape -->
+                <path class="draw-line girl-line"
+                    d="M525 125
+                       C510 55 540 25 580 35
+                       C620 40 645 85 635 150
+                       L655 245
+                       Q580 280 500 245
+                       L525 150Z"/>
+
+                <!-- Niqab face covering -->
+                <path class="draw-line girl-line"
+                    d="M525 125
+                       Q580 105 630 125
+                       L625 155
+                       Q580 175 530 155Z"/>
+
+                <!-- Eyes -->
+                <path class="draw-line girl-line"
+                    d="M540 137 Q552 130 565 137
+                       M590 137 Q603 130 615 137"/>
+
+                <!-- Hijab lower outline -->
+                <path class="draw-line girl-line"
+                    d="M525 155
+                       Q510 205 495 255
+                       Q580 290 660 255
+                       Q645 205 630 155"/>
+
+                <!-- Girl abaya: slightly slimmer -->
+                <path class="draw-line girl-line"
+                    d="M530 260
+                       Q580 240 630 260
+                       L665 440
+                       L495 440Z"/>
+
+                <!-- Girl arms -->
+                <path class="draw-line girl-line"
+                    d="M530 280 L505 345 L475 350"/>
+
+                <path class="draw-line girl-line"
+                    d="M630 280 L650 345 L665 350"/>
+
+                <!-- Ground -->
+                <path class="ground-line"
+                    d="M130 450 Q400 440 700 450"/>
+
+            </svg>
+
+        </div>
+
+        <div class="page13-buttons">
+
+            <a href="{{ url_for('page12') }}" class="page13-button">
+                Previous ❤️
+            </a>
+
+            <a href="#" class="page13-button">
+                Next ❤️
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- Page transition -->
+    <script>
+        document.querySelectorAll('a').forEach(function(link) {
+
+            link.addEventListener('click', function(event) {
+
+                const destination = link.getAttribute('href');
+
+                if (
+                    destination &&
+                    destination !== '#' &&
+                    !destination.startsWith('javascript:')
+                ) {
+                    event.preventDefault();
+
+                    document.body.classList.add('page-leaving');
+
+                    setTimeout(function() {
+                        window.location.href = link.href;
+                    }, 1500);
+                }
+
+            });
+
+        });
+    </script>
+
+</body>
+</html>

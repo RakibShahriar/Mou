@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The First Rain ❤️</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<script>
+    document.querySelectorAll('a').forEach(function(link) {
+
+        link.addEventListener('click', function(event) {
+
+            const destination = link.getAttribute('href');
+
+            if (
+                destination &&
+                destination !== '#' &&
+                !destination.startsWith('javascript:')
+            ) {
+                event.preventDefault();
+
+                document.body.classList.add('page-leaving');
+
+                setTimeout(function() {
+                    window.location.href = link.href;
+                }, 500);
+            }
+
+        });
+
+    });
+</script>
+<body class="page2-body">
+
+    <div class="page2-container">
+
+        <div class="page2-title">The First Rain</div>
+
+        <div class="page2-text-left">
+            I am a person who doesnt like rain that much tbh
+            tmi nijeo jano amr rain koto ta annoying lage.
+            But Rain realted gaan amr alwats bhalo lagto
+            for example Tanvir Evan er Akash.
+        </div>
+
+        <div class="page2-text-right">
+            But jedin amra first bristi te bhijchi 2 jon
+            amr onkkk thanda lagtesilo takeout er lok ra
+            bhalo ac off kore disilo XD but oidin thanada
+            lagleo ami oidin mone mone thik korsi jeno oi
+            din er por theke shob bristhi te jeno shudhu
+            tumi amr pashe thako sheta kash er brishti hok
+            ba life er kothin jhor.
+        </div>
+
+        <a href="{{ url_for('page1') }}" class="page2-back-button">
+            ❤️ Previous
+        </a>
+
+        <a href="{{ url_for('page3') }}" class="next-button">Next ❤️</a>
+
+    </div>
+
+</body>
+</html>

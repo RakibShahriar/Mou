@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Amusement Park ❤️</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<script>
+    document.querySelectorAll('a').forEach(function(link) {
+
+        link.addEventListener('click', function(event) {
+
+            const destination = link.getAttribute('href');
+
+            if (
+                destination &&
+                destination !== '#' &&
+                !destination.startsWith('javascript:')
+            ) {
+                event.preventDefault();
+
+                document.body.classList.add('page-leaving');
+
+                setTimeout(function() {
+                    window.location.href = link.href;
+                }, 500);
+            }
+
+        });
+
+    });
+</script>
+
+<body class="page3-body">
+
+    <div class="page3-container">
+
+        <div class="page3-text-left">
+            Mone ache first pic ta? eta amader mirpur er first time ekta kids zone bola jai ar ki. first din khujchilam pai ni so porer din gesilam ekhane. ekhane ki shundor amra game khelsi tmi toh oi ekta board game e amake harai o felsila, obv tmi amr strong baccha na so thik e ase. But ei din er amr best memory konta jano? ami Namaz e gesilam tmi ekta car er game kheltesila ami eshe dekhi tmi ghumay aso, ami kichukhon darai just dekhtesilam tmr dike takai chilam bhabsilam sharajibon darai thaki ektu dekhi aro kichukhon but tmk ar wait koraile amare maira feltaaaa tai uthaisi tmk giye 🙂
+        </div>
+
+        <div class="page3-title">
+            The Amusement Park
+        </div>
+
+        <div class="page3-text-right">
+            Nicher pic amader first amusment park er oije dmd te ki jani sheikh rasel park amra 2 din ghure gesi pai naiiii pore amake hudai jharso ami naki kisu chini naa😑 as if nije mirpur chine ultai disoo chino toh khali chajoy tai, abr amr chobi tula niyeo khota daoo koto kharap. But hu oidin amr life er best park visit chilo cuz I had my fav person beside me that day, er por 300 ft er park tai jawar iccha chilo tmi toh gela na, but pera naii shamne jabo soon IN SHA ALLAH
+        </div>
+
+        <a href="{{ url_for('page2') }}" class="page3-back-button">
+            ❤️ Previous
+        </a>
+
+        <a href="{{ url_for('page4') }}" class="page3-next-button">
+            Next ❤️
+        </a>
+
+    </div>
+
+</body>
+</html>

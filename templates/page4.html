@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mera Eid ka chand 🥰</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<script>
+    document.querySelectorAll('a').forEach(function(link) {
+
+        link.addEventListener('click', function(event) {
+
+            const destination = link.getAttribute('href');
+
+            if (
+                destination &&
+                destination !== '#' &&
+                !destination.startsWith('javascript:')
+            ) {
+                event.preventDefault();
+
+                document.body.classList.add('page-leaving');
+
+                setTimeout(function() {
+                    window.location.href = link.href;
+                }, 500);
+            }
+
+        });
+
+    });
+</script>
+
+<body class="page4-body">
+
+    <div class="page4-container">
+
+        <div class="page4-title">
+            Mera Eid ka chand 🥰
+        </div>
+
+        <div class="page4-text-left">
+            Ei pic ta amr kache prolly always tmr fav pic thakbe Mou keno? rsn onk ache jemon ei pic tulsilam chand raat e amr onk iccha chilo chand raat tmr sathe jabo and you fulfiled my wish, couldnt be more grateful mou. Manush toh koto mittha bole je tmk chand er theke shundor lagtese and all always toh manush ke ar temon lage na manush shobai always same o lage na same person different lage majhe moddhe etai normal tai na? But oi chand raat e amr chokh e tmk shotti shobcheye shundor chand tai lagse mou I will forever cherish that chand face of yours that I saw that night and no matter how many times I see you this will prolly be my cutest and favourite version of you.
+        </div>
+
+        <div class="page4-text-right">
+            Also ei dine game khelsilam tmi ekhaneo harai diso bhai nc🙂
+        </div>
+
+        <a href="{{ url_for('page3') }}" class="page4-back-button">
+            ❤️ Previous
+        </a>
+
+        <a href="{{ url_for('page5') }}" class="page4-next-button">
+            Next ❤️
+        </a>
+
+    </div>
+
+</body>
+</html>

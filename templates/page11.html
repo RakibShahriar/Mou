@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10th December</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<script>
+    document.querySelectorAll('a').forEach(function(link) {
+
+        link.addEventListener('click', function(event) {
+
+            const destination = link.getAttribute('href');
+
+            if (
+                destination &&
+                destination !== '#' &&
+                !destination.startsWith('javascript:')
+            ) {
+                event.preventDefault();
+
+                document.body.classList.add('page-leaving');
+
+                setTimeout(function() {
+                    window.location.href = link.href;
+                }, 500);
+            }
+
+        });
+
+    });
+</script>
+
+<body class="page11-body">
+
+    <div class="page11-container">
+
+        <h1 class="page11-heading">10th December</h1>
+
+        <div class="page11-flower-section">
+
+            <div class="page11-popup">tap on the flower</div>
+
+            <div class="page11-flower" onclick="revealLetter()">
+
+                <svg viewBox="0 0 220 280" xmlns="http://www.w3.org/2000/svg">
+
+                    <!-- Lily petals -->
+                    <g fill="#fffdf5" stroke="#e8d9c8" stroke-width="1.5">
+
+                        <path d="M110 130 Q35 95 75 20 Q110 65 110 130" />
+                        <path d="M110 130 Q185 95 145 20 Q110 65 110 130" />
+                        <path d="M110 130 Q20 130 40 55 Q90 75 110 130" />
+                        <path d="M110 130 Q200 130 180 55 Q130 75 110 130" />
+                        <path d="M110 130 Q70 190 35 125 Q75 110 110 130" />
+                        <path d="M110 130 Q150 190 185 125 Q145 110 110 130" />
+
+                    </g>
+
+                    <!-- Petal details -->
+                    <g fill="none" stroke="#d9c5b1" stroke-width="1.2">
+                        <path d="M110 130 Q85 75 75 20"/>
+                        <path d="M110 130 Q135 75 145 20"/>
+                        <path d="M110 130 Q65 90 40 55"/>
+                        <path d="M110 130 Q155 90 180 55"/>
+                    </g>
+
+                    <!-- Stamens -->
+                    <g stroke="#b6a36a" stroke-width="3" fill="#9d7645">
+                        <path d="M110 130 L90 75"/>
+                        <path d="M110 130 L105 65"/>
+                        <path d="M110 130 L125 70"/>
+                        <path d="M110 130 L140 90"/>
+                    </g>
+
+                    <g>
+                        <ellipse cx="88" cy="72" rx="6" ry="12" fill="#8e6841" transform="rotate(-25 88 72)"/>
+                        <ellipse cx="104" cy="62" rx="6" ry="12" fill="#8e6841"/>
+                        <ellipse cx="126" cy="67" rx="6" ry="12" fill="#8e6841" transform="rotate(20 126 67)"/>
+                        <ellipse cx="141" cy="87" rx="6" ry="12" fill="#8e6841" transform="rotate(30 141 87)"/>
+                    </g>
+
+                    <!-- Stem -->
+                    <path d="M110 130 Q115 190 110 270"
+                          fill="none"
+                          stroke="#6d8957"
+                          stroke-width="7"
+                          stroke-linecap="round"/>
+
+                    <!-- Leaves -->
+                    <path d="M110 205 Q55 190 50 160 Q90 170 110 205"
+                          fill="#718b5b" stroke="#4e7044" stroke-width="1"/>
+
+                    <path d="M110 235 Q160 210 175 180 Q130 195 110 235"
+                          fill="#718b5b" stroke="#4e7044" stroke-width="1"/>
+
+                </svg>
+
+            </div>
+
+        </div>
+
+        <div class="page11-letter" id="birthdayLetter">
+
+            <p>
+                Jei jonno mainly eta banano ta holo apnar bday maam. Ami bday celebrate kori na and ami blv kori kaoke special mone korle take special feel koranor kono day nei 365 days e shei manush ta special hoy. But this day is really important to me wanna know why?? Because ei dinei tmr birth hoisilo mou. Amr onk plans chilo, I had prepared many things but ami jani tmi onk bz, tmr onk kaaj thake onk manush ache you have to go out with on your day so ami ar pera dite chai na tmk dekha korte bole .last year o ei din ta normal 10th decemeber er moto e chilo amr life e but aj eta onk special cuz ei dine tmi hoiso and ALHADULILLAH Im glad this date exists. Tmi amr jonno important sheta tmi jano etao jano ami tmk love kori but tmi eta jano na ami koto ta love kori or tmi amr jonno koto ta important. Tmi ki ami e toh jani na cuz love importance egulo measure korar jonno kono scale nei hae etai jani ami joto ta amr baba ma 2 bon ke love kori thik tototai tmk eo kori. Maybe amader moddhe distance create hoise, kal bhagge ki lekha ache adou tmr naam er pashe ALLAH ki amr naam likhe rakhsen kina tao jani na but distance or time could never do anything to reduce my love or your importance in my life. Bhagge na thakleo future e na thakleo I am really happy we met, I am really happy i could hug you, rest on your shoulders, see you smile, most importantly I am glad I found love and the name was Farzana Akter Mou(my Mouyuri, my Moupie, my Ya Qamari). Happy Birthday Mou May ALLAH grant you hayat and all the happiness and success in this life and the Akhirat AMEEN may ALLAH always guide you towards the straight path  AMEEN SUMME AMEEN. Thank you for existing and most importantly thank you for coming into my life.
+            </p>
+
+        </div>
+
+        <a href="{{ url_for('page10') }}" class="page11-previous-button">
+            Previous ❤️
+        </a>
+
+        <a href="{{ url_for('page15') }}" class="page11-next-button">
+
+            Next ❤️
+        </a>
+
+    </div>
+
+    <script>
+        function revealLetter() {
+            const letter = document.getElementById("birthdayLetter");
+            letter.classList.toggle("show-letter");
+        }
+    </script>
+
+</body>
+</html>

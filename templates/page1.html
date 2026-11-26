@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The First Meet ❤️</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<script>
+    document.querySelectorAll('a').forEach(function(link) {
+
+        link.addEventListener('click', function(event) {
+
+            const destination = link.getAttribute('href');
+
+            if (
+                destination &&
+                destination !== '#' &&
+                !destination.startsWith('javascript:')
+            ) {
+                event.preventDefault();
+
+                document.body.classList.add('page-leaving');
+
+                setTimeout(function() {
+                    window.location.href = link.href;
+                }, 500);
+            }
+
+        });
+
+    });
+</script>
+
+<body class="page1-body">
+
+
+
+    <div class="page1-container">
+
+        <!-- Top Middle Title -->
+        <div class="page1-title">
+            The first meet
+        </div>
+
+
+        <!-- Top Left Text -->
+        <div class="page1-text page1-text-left">
+
+            2nd May was the date when i saw you for the first time.(Though ageo dekha hoise but etai mainly first meet bujhchoo)
+            Amader meet ta ekdom ideal chilo na as amader first meet ei
+            amr tomake hospital e dekha lagse. 🙂
+
+        </div>
+
+
+        <!-- Bottom Right Text -->
+        <div class="page1-text page1-text-right">
+
+            But I am happy that we met that day and our chapter could
+            have a happy starting jodio ami jantam na je oi starting
+            theke ami amr life er most impotant manush ta ke peye jabo.
+
+        </div>
+
+
+        <!-- Next Button -->
+         <a href="{{ url_for('page2') }}" class="next-button">
+            Next ❤️
+        </a>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,1967 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================================
+   LOGIN PAGE
+   ========================================= */
+
+.login-container {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    background-image: url("images/login.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    transform: translateY(-45px);
+}
+
+.login-box {
+    width: 320px;
+    max-width: 100%;
+
+    padding: 25px;
+
+    background: rgba(255, 255, 255, 0.20);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 18px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.20);
+}
+
+.login-box h1 {
+    font-size: 26px;
+
+    color: white;
+
+    text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.7);
+
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: white;
+
+    font-size: 14px;
+
+    margin-bottom: 22px;
+
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.input-group {
+    text-align: left;
+
+    margin-bottom: 14px;
+}
+
+.input-group label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: white;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.input-group input {
+    width: 100%;
+
+    padding: 10px;
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+
+    background: rgba(255, 255, 255, 0.90);
+
+    font-size: 14px;
+
+    color: #333;
+
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color: #ff4f87;
+
+    box-shadow: 0 0 8px rgba(255, 79, 135, 0.5);
+}
+
+button {
+    width: 100%;
+
+    padding: 10px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #ff4f87;
+
+    color: white;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #e83270;
+
+    transform: scale(1.03);
+}
+
+.error {
+    color: white;
+
+    background: rgba(180, 0, 0, 0.65);
+
+    padding: 8px;
+
+    border-radius: 7px;
+
+    margin-bottom: 12px;
+
+    font-size: 13px;
+}
+
+
+/* PAGE 1 */
+.page1-body {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("images/page1.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.page1-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+/* HEADER */
+.page1-title {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 32px;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 1px;
+    text-align: center;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+}
+
+/* TEXT */
+.page1-text {
+    position: absolute;
+    width: 30%;
+    color: white;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 20px;
+    line-height: 1.6;
+    letter-spacing: 0.2px;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.9);
+    text-align: left;
+}
+
+/* TOP LEFT TEXT */
+
+.page1-text-left {
+    top: 5%;
+    left: 50px
+}
+/*.page1-text-left {
+    top: 70px;
+    left: 50px;
+}
+
+/* BOTTOM RIGHT TEXT */
+.page1-text-right {
+    right: 50px;
+    bottom: 110px;
+}
+
+/* NEXT BUTTON */
+.next-button {
+    position: absolute;
+    right: 40px;
+    bottom: 35px;
+    padding: 10px 22px;
+    background: rgba(255,79,135,0.85);
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.next-button:hover {
+    background: rgba(232,50,112,0.95);
+    transform: scale(1.05);
+}
+
+/* MOBILE */
+@media (max-width:600px) {
+
+    .page1-title {
+        top: 25px;
+        font-size: 26px;
+    }
+
+    .page1-text {
+        width: 40%;
+        font-size: 15px;
+        line-height: 1.45;
+    }
+
+    .page1-text-left {
+        top: 75px;
+        left: 20px;
+    }
+
+    .page1-text-right {
+        right: 20px;
+        bottom: 90px;
+    }
+
+    .next-button {
+        right: 20px;
+        bottom: 20px;
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+
+/* PAGE 2 - THE FIRST RAIN */
+
+.page2-body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    background-image: url("images/page2.jpeg");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #17131a;
+    background-attachment: scroll;
+    overflow-x: hidden;
+}
+
+.page2-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* HEADING */
+
+.page2-title {
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    color: #fff0df;
+    font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    font-size: 36px;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 2px;
+    text-align: center;
+
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.95);
+    white-space: nowrap;
+}
+
+/* LEFT PARAGRAPH */
+
+.page2-text-left {
+    position: absolute;
+    top: 30%;
+    left: 4%;
+    width: 27%;
+
+    color: #fff0df;
+    font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    font-size: 22px;
+    line-height: 1.9;
+    font-style: italic;
+    text-align: center;
+
+    text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.95);
+}
+
+/* RIGHT PARAGRAPH */
+
+.page2-text-right {
+    position: absolute;
+    top: 30%;
+    right: 4%;
+    width: 27%;
+
+    color: #fff0df;
+    font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    font-size: 22px;
+    line-height: 1.9;
+    font-style: italic;
+    text-align: center;
+
+    text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.95);
+}
+
+/* PREVIOUS BUTTON */
+
+.page2-back-button {
+    position: absolute;
+    left: 40px;
+    bottom: 35px;
+    padding: 10px 22px;
+
+    background: rgba(255, 79, 135, 0.85);
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.page2-back-button:hover {
+    background: rgba(232, 50, 112, 0.95);
+    transform: scale(1.05);
+}
+
+/* MOBILE VIEW */
+
+@media (max-width: 600px) {
+
+    .page2-body {
+        background-size: contain;
+        background-position: center top;
+    }
+
+    .page2-container {
+        min-height: 100vh;
+        padding-bottom: 80px;
+    }
+
+    .page2-title {
+        top: 20px;
+        font-size: 25px;
+    }
+
+    .page2-text-left,
+    .page2-text-right {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        width: 85%;
+        margin: 30px auto;
+        font-size: 22px;
+        line-height: 1.9;
+        text-align: center;
+    }
+
+    .page2-text-left {
+        margin-top: 100px;
+    }
+
+    .page2-back-button {
+        left: 20px;
+        bottom: 20px;
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+
+/* PAGE 3 - THE AMUSEMENT PARK */
+
+.page3-body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    background-image: url("images/page3.webp");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #17131a;
+    background-attachment: scroll;
+    overflow-x: hidden;
+}
+
+.page3-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* CENTER HEADING */
+
+.page3-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+
+    color: #fff0df;
+    font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    font-size: 36px;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 2px;
+    text-align: center;
+
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.95);
+    pointer-events: none;
+}
+
+/* LEFT PARAGRAPH */
+
+.page3-text-left {
+    position: absolute;
+    top: 18%;
+    left: 3%;
+    width: 27%;
+    max-height: 65vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding: 12px;
+
+    color: #fff0df;
+    font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    font-size: 22px;
+    line-height: 1.8;
+    font-style: italic;
+    text-align: center;
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.95);
+}
+
+/* RIGHT PARAGRAPH */
+
+.page3-text-right {
+    position: absolute;
+    top: 18%;
+    right: 3%;
+    width: 27%;
+    max-height: 65vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding: 12px;
+
+    color: #fff0df;
+    font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    font-size: 22px;
+    line-height: 1.8;
+    font-style: italic;
+    text-align: center;
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.95);
+}
+
+/* NAVIGATION BUTTONS */
+
+.page3-back-button,
+.page3-next-button {
+    position: absolute;
+    bottom: 30px;
+    padding: 10px 22px;
+
+    background: rgba(255, 79, 135, 0.85);
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.page3-back-button {
+    left: 35px;
+}
+
+.page3-next-button {
+    right: 35px;
+}
+
+.page3-back-button:hover,
+.page3-next-button:hover {
+    background: rgba(232, 50, 112, 0.95);
+    transform: scale(1.05);
+}
+
+/* MOBILE VIEW */
+
+@media (max-width: 600px) {
+
+    .page3-body {
+        background-size: 100% auto;
+        background-position: center top;
+    }
+
+    .page3-container {
+        min-height: 100vh;
+        padding: 20px 0 90px;
+    }
+
+    .page3-title {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 90%;
+        margin: 35px auto;
+        font-size: 27px;
+    }
+
+    .page3-text-left,
+    .page3-text-right {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        width: 88%;
+        max-height: none;
+        overflow: visible;
+        margin: 25px auto;
+        padding: 12px;
+        font-size: 16px;
+        line-height: 1.65;
+    }
+
+    .page3-back-button {
+        left: 15px;
+        bottom: 20px;
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+
+    .page3-next-button {
+        right: 15px;
+        bottom: 20px;
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+}
+
+/* PAGE 4 - MERA EID KA CHAND */
+
+.page4-body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    background-image: url("images/page4.jpeg");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #17131a;
+    background-attachment: scroll;
+    overflow-x: hidden;
+}
+
+.page4-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* HEADING */
+
+.page4-title {
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+
+    color: #fff0df;
+    font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    font-size: 36px;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 2px;
+    text-align: center;
+
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.95);
+}
+
+/* LEFT PARAGRAPH */
+
+.page4-text-left {
+    position: absolute;
+    top: 18%;
+    left: 3%;
+    width: 27%;
+    max-height: 65vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding: 12px;
+
+    color: #fff0df;
+    font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    font-size: 20px;
+    line-height: 1.75;
+    font-style: italic;
+    text-align: center;
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.95);
+}
+
+/* RIGHT PARAGRAPH */
+
+.page4-text-right {
+    position: absolute;
+    top: 40%;
+    right: 3%;
+    width: 27%;
+    max-height: 40vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding: 12px;
+
+    color: #fff0df;
+    font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    font-size: 21px;
+    line-height: 1.8;
+    font-style: italic;
+    text-align: center;
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.95);
+}
+
+/* NAVIGATION */
+
+.page4-back-button,
+.page4-next-button {
+    position: absolute;
+    bottom: 30px;
+    padding: 10px 22px;
+
+    background: rgba(255, 79, 135, 0.85);
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.page4-back-button {
+    left: 35px;
+}
+
+.page4-next-button {
+    right: 35px;
+}
+
+.page4-back-button:hover,
+.page4-next-button:hover {
+    background: rgba(232, 50, 112, 0.95);
+    transform: scale(1.05);
+}
+
+/* MOBILE VIEW */
+
+@media (max-width: 600px) {
+
+    .page4-body {
+        background-size: 100% auto;
+        background-position: center top;
+    }
+
+    .page4-container {
+        min-height: 100vh;
+        padding: 20px 0 90px;
+    }
+
+    .page4-title {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 90%;
+        margin: 30px auto;
+        font-size: 27px;
+    }
+
+    .page4-text-left,
+    .page4-text-right {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        width: 88%;
+        max-height: none;
+        overflow: visible;
+        margin: 25px auto;
+        padding: 12px;
+        font-size: 18px;
+        line-height: 1.70;
+    }
+
+    .page4-back-button {
+        left: 15px;
+        bottom: 20px;
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+
+    .page4-next-button {
+        right: 15px;
+        bottom: 20px;
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+}
+
+
+/* PAGE 5 - EID SAREE */
+
+.page5-body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    background-image: url("images/page5.jpeg");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #17131a;
+    background-attachment: scroll;
+    overflow-x: hidden;
+}
+
+.page5-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* HEADING */
+
+.page5-title {
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+
+    color: #fff0df;
+    font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    font-size: 36px;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 2px;
+    text-align: center;
+
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.95);
+}
+
+/* LEFT PARAGRAPH */
+
+.page5-text-left {
+    position: absolute;
+    top: 35%;
+    left: 3%;
+    width: 27%;
+    max-height: 45vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding: 12px;
+
+    color: #fff0df;
+    font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    font-size: 22px;
+    line-height: 1.8;
+    font-style: italic;
+    text-align: center;
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.95);
+}
+
+/* RIGHT PARAGRAPH */
+
+.page5-text-right {
+    position: absolute;
+    top: 18%;
+    right: 3%;
+    width: 27%;
+    max-height: 65vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding: 12px;
+
+    color: #fff0df;
+    font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    font-size: 22px;
+    line-height: 1.8;
+    font-style: italic;
+    text-align: center;
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.95);
+}
+
+/* NAVIGATION BUTTONS */
+
+.page5-back-button,
+.page5-next-button {
+    position: absolute;
+    bottom: 30px;
+    padding: 10px 22px;
+
+    background: rgba(255, 79, 135, 0.85);
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.page5-back-button {
+    left: 35px;
+}
+
+.page5-next-button {
+    right: 35px;
+}
+
+.page5-back-button:hover,
+.page5-next-button:hover {
+    background: rgba(232, 50, 112, 0.95);
+    transform: scale(1.05);
+}
+
+/* MOBILE VIEW */
+
+@media (max-width: 600px) {
+
+    .page5-body {
+        background-size: 100% auto;
+        background-position: center top;
+    }
+
+    .page5-container {
+        min-height: 100vh;
+        padding: 20px 0 90px;
+    }
+
+    .page5-title {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 90%;
+        margin: 30px auto;
+        font-size: 27px;
+    }
+
+    .page5-text-left,
+    .page5-text-right {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        width: 88%;
+        max-height: none;
+        overflow: visible;
+        margin: 25px auto;
+        padding: 15px;
+        font-size: 18px;
+        line-height: 1.70;
+    }
+
+    .page5-back-button {
+        left: 15px;
+        bottom: 20px;
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+
+    .page5-next-button {
+        right: 15px;
+        bottom: 20px;
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+}
+
+/* PAGE 6 */
+
+.page6-body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #17131a;
+    background-image: url("/static/images/page6.jpeg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    overflow-x: hidden;
+}
+
+.page6-container {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.page6-heading {
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    margin: 0;
+    text-align: center;
+
+    font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    font-size: 34px;
+    font-weight: bold;
+    font-style: italic;
+    color: #fff3df;
+    text-shadow: 2px 2px 6px #000000;
+}
+
+.page6-previous-button,
+.page6-next-button {
+    position: absolute;
+    bottom: 30px;
+    padding: 12px 25px;
+
+    background: rgba(30, 20, 30, 0.8);
+    color: #fff3df;
+    text-decoration: none;
+    border: 1px solid #fff3df;
+    border-radius: 25px;
+
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.page6-previous-button {
+    left: 30px;
+}
+
+.page6-next-button {
+    right: 30px;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 600px) {
+    .page6-heading {
+        top: 25px;
+        width: 94%;
+        font-size: 25px;
+    }
+
+    .page6-previous-button,
+    .page6-next-button {
+        bottom: 20px;
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+
+    .page6-previous-button {
+        left: 15px;
+    }
+
+    .page6-next-button {
+        right: 15px;
+    }
+}
+
+
+/* PAGE 7 */
+
+.page7-body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #17131a;
+    background-image: url("/static/images/page7.jpeg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    overflow-x: hidden;
+}
+
+.page7-container {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.page7-heading {
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    margin: 0;
+    text-align: center;
+
+    font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    font-size: 34px;
+    font-weight: bold;
+    font-style: italic;
+    color: #fff3df;
+    text-shadow: 2px 2px 6px #000000;
+}
+
+.page7-previous-button,
+.page7-next-button {
+    position: absolute;
+    bottom: 30px;
+    padding: 12px 25px;
+
+    background: rgba(30, 20, 30, 0.8);
+    color: #fff3df;
+    text-decoration: none;
+    border: 1px solid #fff3df;
+    border-radius: 25px;
+
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.page7-previous-button {
+    left: 30px;
+}
+
+.page7-next-button {
+    right: 30px;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 600px) {
+    .page7-heading {
+        top: 25px;
+        width: 94%;
+        font-size: 25px;
+    }
+
+    .page7-previous-button,
+    .page7-next-button {
+        bottom: 20px;
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+
+    .page7-previous-button {
+        left: 15px;
+    }
+
+    .page7-next-button {
+        right: 15px;
+    }
+}
+
+
+/* PAGE 8 - HORIZONTAL IMAGE */
+
+.page8-body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: #17131a;
+}
+
+.page8-container {
+    position: fixed;
+    width: 100vh;
+    height: 100vw;
+    top: 100vh;
+    left: 0;
+    transform: rotate(-90deg);
+    transform-origin: top left;
+
+    background-image: url("/static/images/page8.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.page8-heading {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    text-align: center;
+
+    color: white;
+    font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    font-size: 25px;
+    font-style: italic;
+    text-shadow: 2px 2px 5px black;
+    z-index: 2;
+}
+
+.page8-previous-button {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 2;
+}
+
+.page8-next-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 2;
+}
+
+/* PAGE 9 */
+
+.page9-body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: #17131a;
+}
+
+.page9-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("/static/images/page9.jpeg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+
+.page9-heading {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    text-align: center;
+    color: #fff4df;
+    font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    font-style: italic;
+    text-shadow: 2px 2px 5px black;
+}
+
+.page9-left-text,
+.page9-right-text {
+    position: absolute;
+    top: 25%;
+    width: 30%;
+    max-height: 55%;
+    overflow-y: auto;
+    color: #fff4df;
+    font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    font-size: 22px;
+    font-style: italic;
+    line-height: 1.5;
+    text-shadow: 2px 2px 5px black;
+}
+
+.page9-left-text {
+    left: 5%;
+    text-align: left;
+}
+
+.page9-right-text {
+    right: 5%;
+    text-align: right;
+}
+
+.page9-previous-button {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+}
+
+.page9-next-button {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+}
+
+@media (max-width: 768px) {
+    .page9-left-text,
+    .page9-right-text {
+        width: 38%;
+        font-size: 16px;
+    }
+}
+
+/* PAGE 8 AND PAGE 9 NAVIGATION BUTTONS */
+
+.page8-previous-button,
+.page8-next-button,
+.page9-previous-button,
+.page9-next-button {
+    position: absolute;
+    bottom: 30px;
+    padding: 12px 25px;
+
+    background: rgba(30, 20, 30, 0.8);
+    color: #fff3df;
+    text-decoration: none;
+    border: 1px solid #fff3df;
+    border-radius: 25px;
+
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-style: italic;
+}
+
+/* PREVIOUS BUTTONS */
+
+.page8-previous-button,
+.page9-previous-button {
+    left: 30px;
+}
+
+/* NEXT BUTTONS */
+
+.page8-next-button,
+.page9-next-button {
+    right: 30px;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 600px) {
+
+    .page8-previous-button,
+    .page8-next-button,
+    .page9-previous-button,
+    .page9-next-button {
+        bottom: 20px;
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+
+    .page8-previous-button,
+    .page9-previous-button {
+        left: 15px;
+    }
+
+    .page8-next-button,
+    .page9-next-button {
+        right: 15px;
+    }
+}
+
+
+/* PAGE 10 */
+
+.page10-body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: #17131a;
+}
+
+.page10-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("/static/images/page10.jpeg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+
+.page10-left-text,
+.page10-right-text {
+    position: absolute;
+    top: 25%;
+    width: 30%;
+    max-height: 55%;
+    overflow-y: auto;
+    color: #fff4df;
+    font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    font-size: 22px;
+    font-style: italic;
+    line-height: 1.5;
+    text-shadow: 2px 2px 5px black;
+}
+
+.page10-left-text {
+    left: 5%;
+    text-align: left;
+}
+
+.page10-right-text {
+    right: 5%;
+    text-align: right;
+}
+
+/* PAGE 10 NAVIGATION BUTTONS */
+
+.page10-previous-button,
+.page10-next-button {
+    position: absolute;
+    bottom: 30px;
+    padding: 12px 25px;
+    background: rgba(30, 20, 30, 0.8);
+    color: #fff3df;
+    text-decoration: none;
+    border: 1px solid #fff3df;
+    border-radius: 25px;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.page10-previous-button {
+    left: 30px;
+}
+
+.page10-next-button {
+    right: 30px;
+}
+
+@media(max-width: 768px) {
+    .page10-left-text,
+    .page10-right-text {
+        width: 38%;
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 600px) {
+    .page10-previous-button,
+    .page10-next-button {
+        bottom: 20px;
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+
+    .page10-previous-button {
+        left: 15px;
+    }
+
+    .page10-next-button {
+        right: 15px;
+    }
+}
+
+
+/* PAGE 11 - BIRTHDAY */
+
+.page11-body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: #17131a;
+}
+
+.page11-container {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background:
+        radial-gradient(ellipse at center, #302034 0%, #17131a 70%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page11-heading {
+    margin-top: 35px;
+    color: #fff3df;
+    font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    font-size: 42px;
+    font-style: italic;
+    text-shadow: 2px 2px 8px #000;
+    text-align: center;
+}
+
+/* FLOWER */
+
+.page11-flower-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.page11-flower {
+    width: 220px;
+    cursor: pointer;
+    transition: transform 0.4s ease, filter 0.4s ease;
+    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.25));
+}
+
+.page11-flower:hover {
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 22px rgba(255, 255, 255, 0.45));
+}
+
+.page11-flower svg {
+    width: 100%;
+    display: block;
+}
+
+/* POPUP */
+
+.page11-popup {
+    position: absolute;
+    top: 10px;
+    left: 180px;
+    width: 140px;
+    color: #fff3df;
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 17px;
+    text-align: center;
+    padding: 12px;
+    border: 1px solid #fff3df;
+    border-radius: 20px;
+    background: rgba(30, 20, 30, 0.8);
+    animation: flowerHint 2s infinite ease-in-out;
+}
+
+@keyframes flowerHint {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+/* HIDDEN LETTER */
+
+.page11-letter {
+    display: none;
+    width: 70%;
+    max-width: 850px;
+    margin: 35px auto 100px;
+    padding: 25px;
+    color: #fff3df;
+    font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    font-size: 21px;
+    font-style: italic;
+    line-height: 1.8;
+    text-align: center;
+    text-shadow: 1px 1px 4px black;
+    background: rgba(30, 20, 30, 0.35);
+    border-radius: 15px;
+}
+
+.page11-letter.show-letter {
+    display: block;
+    animation: letterAppear 1s ease;
+}
+
+@keyframes letterAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* NAVIGATION */
+
+.page11-previous-button,
+.page11-next-button {
+    position: fixed;
+    bottom: 30px;
+    padding: 12px 25px;
+    background: rgba(30, 20, 30, 0.8);
+    color: #fff3df;
+    text-decoration: none;
+    border: 1px solid #fff3df;
+    border-radius: 25px;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-style: italic;
+    z-index: 5;
+}
+
+.page11-previous-button {
+    left: 30px;
+}
+
+.page11-next-button {
+    right: 30px;
+}
+
+/* MOBILE */
+
+@media(max-width: 768px) {
+
+    .page11-heading {
+        font-size: 34px;
+    }
+
+    .page11-flower {
+        width: 180px;
+    }
+
+    .page11-popup {
+        left: 140px;
+        width: 110px;
+        font-size: 14px;
+    }
+
+    .page11-letter {
+        width: 85%;
+        padding: 10px;
+        font-size: 17px;
+        line-height: 1.7;
+    }
+}
+
+@media(max-width: 600px) {
+
+    .page11-previous-button,
+    .page11-next-button {
+        bottom: 20px;
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+
+    .page11-previous-button {
+        left: 15px;
+    }
+
+    .page11-next-button {
+        right: 15px;
+    }
+}
+
+
+/* PAGE 12 - PASSWORD PAGE */
+
+.page12-body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: #17131a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Georgia, serif;
+}
+
+.page12-password-box {
+    text-align: center;
+    width: 85%;
+    max-width: 400px;
+    padding: 30px;
+    color: #fff3df;
+}
+
+.page12-password-box h2 {
+    font-size: 28px;
+    font-style: italic;
+}
+
+.page12-password-box p {
+    font-size: 16px;
+    font-style: italic;
+}
+
+.page12-password-box input {
+    width: 85%;
+    padding: 13px;
+    margin: 15px 0;
+    border: 1px solid #fff3df;
+    border-radius: 25px;
+    outline: none;
+    background: #29212d;
+    color: #fff3df;
+    font-size: 16px;
+    text-align: center;
+}
+
+.page12-password-box button {
+    padding: 12px 28px;
+    border: 1px solid #fff3df;
+    border-radius: 25px;
+    background: rgba(30, 20, 30, 0.8);
+    color: #fff3df;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-style: italic;
+    cursor: pointer;
+}
+
+.page12-password-box button:hover {
+    background: #49364d;
+}
+
+.page12-error {
+    color: #ff9b9b;
+    margin-top: 15px;
+}
+
+
+
+
+/* PAGE 13 - THE QUESTION */
+
+.page13-body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: #17131a;
+    color: #fff3df;
+    overflow-x: hidden;
+}
+
+.page13-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(ellipse at center, #302034, #17131a 75%);
+    padding: 20px 15px 90px;
+    box-sizing: border-box;
+}
+
+.page13-heading {
+    font-family: "Palatino Linotype", Georgia, serif;
+    font-size: 36px;
+    font-style: italic;
+    font-weight: normal;
+    text-align: center;
+    margin: 15px 0 20px;
+    text-shadow: 2px 2px 8px black;
+}
+
+.page13-scene {
+    width: 100%;
+    max-width: 800px;
+}
+
+.page13-scene svg {
+    width: 100%;
+    height: auto;
+    overflow: visible;
+}
+
+/* DOTTED DRAWING ANIMATION */
+
+.draw-line {
+    fill: none;
+    stroke: #fff3df;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 5 7;
+    stroke-dashoffset: 1000;
+    animation: drawCharacter 5s ease forwards;
+}
+
+.boy-line {
+    animation-delay: 0.2s;
+}
+
+.girl-line {
+    animation-delay: 2s;
+}
+
+.ring {
+    stroke: #e8c76a;
+    stroke-width: 4;
+    animation-delay: 4s;
+}
+
+.ground-line {
+    fill: none;
+    stroke: #a58b9e;
+    stroke-width: 2;
+    stroke-dasharray: 5 8;
+    stroke-dashoffset: 500;
+    animation: drawCharacter 3s ease forwards;
+    animation-delay: 1s;
+}
+
+@keyframes drawCharacter {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* QUESTION */
+
+.page13-question {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+
+@keyframes questionAppear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* BUTTONS */
+
+.page13-buttons {
+    position: fixed;
+    bottom: 25px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    pointer-events: none;
+}
+
+.page13-button {
+    pointer-events: auto;
+    padding: 12px 25px;
+    background: rgba(30, 20, 30, 0.8);
+    color: #fff3df;
+    text-decoration: none;
+    border: 1px solid #fff3df;
+    border-radius: 25px;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-style: italic;
+}
+
+/* MOBILE */
+
+@media(max-width: 600px) {
+
+    .page13-heading {
+        font-size: 28px;
+    }
+
+    .page13-scene {
+        width: 110%;
+    }
+
+    .page13-question {
+        font-size: 23px;
+        margin-top: 10px;
+    }
+
+    .page13-buttons {
+        padding: 0 15px;
+        bottom: 20px;
+    }
+
+    .page13-button {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+}
+
+
+/* PAGE TRANSITION */
+
+body {
+    animation: pageFadeIn 1.5s ease-in-out forwards;
+}
+
+body.page-leaving {
+    animation: pageFadeOut 1.5s ease-in-out forwards;
+    pointer-events: none;
+}
+
+@keyframes pageFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pageFadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+
+/* PAGE 15 */
+
+.page15-body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: #17131a;
+}
+
+.page15-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("/static/images/page15.jpeg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    display: flex;
+    justify-content: center;
+}
+
+/* WRITING */
+
+.page15-writing {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    margin: 0;
+    text-align: center;
+
+    color: #fff4df;
+    font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    font-size: 30px;
+    font-style: italic;
+    line-height: 1.5;
+    text-shadow: 2px 2px 6px black;
+}
+
+/* NAVIGATION */
+
+.page15-previous-button,
+.page15-next-button {
+    position: absolute;
+    bottom: 30px;
+    padding: 12px 25px;
+    background: rgba(30, 20, 30, 0.8);
+    color: #fff3df;
+    text-decoration: none;
+    border: 1px solid #fff3df;
+    border-radius: 25px;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.page15-previous-button {
+    left: 30px;
+}
+
+.page15-next-button {
+    right: 30px;
+}
+
+/* MOBILE */
+
+@media(max-width: 768px) {
+    .page15-writing {
+        font-size: 23px;
+        width: 85%;
+        top: 43%;
+    }
+}
+
+@media(max-width: 600px) {
+    .page15-previous-button,
+    .page15-next-button {
+        bottom: 20px;
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+
+    .page15-previous-button {
+        left: 15px;
+    }
+
+    .page15-next-button {
+        right: 15px;
+    }
+}

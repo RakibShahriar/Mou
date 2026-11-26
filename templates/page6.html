@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The person who made my Eid Special</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<script>
+    document.querySelectorAll('a').forEach(function(link) {
+
+        link.addEventListener('click', function(event) {
+
+            const destination = link.getAttribute('href');
+
+            if (
+                destination &&
+                destination !== '#' &&
+                !destination.startsWith('javascript:')
+            ) {
+                event.preventDefault();
+
+                document.body.classList.add('page-leaving');
+
+                setTimeout(function() {
+                    window.location.href = link.href;
+                }, 500);
+            }
+
+        });
+
+    });
+</script>
+<body class="page6-body">
+
+    <div class="page6-container">
+
+        <h1 class="page6-heading">
+            The person who made my Eid Special🥰
+        </h1>
+
+        <a href="{{ url_for('page5') }}" class="page6-previous-button">
+            Previous ❤️
+        </a>
+
+        <a href="{{ url_for('page7') }}" class="page6-next-button">
+            Next ❤️
+        </a>
+
+    </div>
+
+</body>
+</html>

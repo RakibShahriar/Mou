@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 15</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="page15-body">
+
+    <div class="page15-container">
+
+        <p class="page15-writing">
+            The sunset is beautiful, isn't it?
+        </p>
+
+        <a href="{{ url_for('page11') }}" class="page15-previous-button">
+            Previous ❤️
+        </a>
+
+        <a href="{{ url_for('page12') }}" class="page15-next-button">
+            Next ❤️
+        </a>
+
+    </div>
+
+    <script>
+        document.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', function(event) {
+                const destination = link.getAttribute('href');
+
+                if (destination && destination !== '#') {
+                    event.preventDefault();
+
+                    document.body.classList.add('page-leaving');
+
+                    setTimeout(function() {
+                        window.location.href = link.href;
+                    }, 1500);
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

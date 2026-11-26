@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Eyes That Hold All The Beauty</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<script>
+    document.querySelectorAll('a').forEach(function(link) {
+
+        link.addEventListener('click', function(event) {
+
+            const destination = link.getAttribute('href');
+
+            if (
+                destination &&
+                destination !== '#' &&
+                !destination.startsWith('javascript:')
+            ) {
+                event.preventDefault();
+
+                document.body.classList.add('page-leaving');
+
+                setTimeout(function() {
+                    window.location.href = link.href;
+                }, 500);
+            }
+
+        });
+
+    });
+</script>
+<body class="page8-body">
+
+    <div class="page8-container">
+
+        <a href="{{ url_for('page7') }}" class="page8-previous-button">
+            Previous ❤️
+        </a>
+
+        <a href="{{ url_for('page9') }}" class="page8-next-button">
+            Next ❤️
+        </a>
+
+    </div>
+
+</body>
+</html>
+

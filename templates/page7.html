@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Most Precious Gifts</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<script>
+    document.querySelectorAll('a').forEach(function(link) {
+
+        link.addEventListener('click', function(event) {
+
+            const destination = link.getAttribute('href');
+
+            if (
+                destination &&
+                destination !== '#' &&
+                !destination.startsWith('javascript:')
+            ) {
+                event.preventDefault();
+
+                document.body.classList.add('page-leaving');
+
+                setTimeout(function() {
+                    window.location.href = link.href;
+                }, 500);
+            }
+
+        });
+
+    });
+</script>
+<body class="page7-body">
+
+    <div class="page7-container">
+
+        <h1 class="page7-heading">
+            my most precious gifts
+        </h1>
+
+        <a href="{{ url_for('page6') }}" class="page7-previous-button">
+            Previous ❤️
+        </a>
+
+        <a href="{{ url_for('page8') }}" class="page7-next-button">
+            Next ❤️
+        </a>
+
+    </div>
+
+</body>
+</html>
