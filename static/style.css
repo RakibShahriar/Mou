@@ -211,10 +211,6 @@ button:hover {
 
 .page1-text-left {
     top: 5%;
-    left: 50px
-}
-/*.page1-text-left {
-    top: 70px;
     left: 50px;
 }
 
@@ -254,7 +250,7 @@ button:hover {
 
     .page1-text {
         width: 40%;
-        font-size: 15px;
+        font-size: 7px;
         line-height: 1.45;
     }
 
@@ -391,8 +387,8 @@ button:hover {
     }
 
     .page2-title {
-        top: 20px;
-        font-size: 25px;
+        top: 5px;
+        font-size: 10px;
     }
 
     .page2-text-left,
@@ -563,8 +559,8 @@ button:hover {
         left: auto;
         transform: none;
         width: 90%;
-        margin: 35px auto;
-        font-size: 27px;
+        margin: 15px auto;
+        font-size: 10px;
     }
 
     .page3-text-left,
@@ -739,7 +735,7 @@ button:hover {
         transform: none;
         width: 90%;
         margin: 30px auto;
-        font-size: 27px;
+        font-size: 10px;
     }
 
     .page4-text-left,
@@ -914,8 +910,8 @@ button:hover {
         left: auto;
         transform: none;
         width: 90%;
-        margin: 30px auto;
-        font-size: 27px;
+        margin: 10px auto;
+        font-size: 10px;
     }
 
     .page5-text-left,
@@ -1015,9 +1011,9 @@ button:hover {
 
 @media (max-width: 600px) {
     .page6-heading {
-        top: 25px;
+        top: 10px;
         width: 94%;
-        font-size: 25px;
+        font-size: 10px;
     }
 
     .page6-previous-button,
