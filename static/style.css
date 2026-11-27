@@ -211,6 +211,10 @@ button:hover {
 
 .page1-text-left {
     top: 5%;
+    left: 50px
+}
+/*.page1-text-left {
+    top: 70px;
     left: 50px;
 }
 
@@ -250,7 +254,7 @@ button:hover {
 
     .page1-text {
         width: 40%;
-        font-size: 4px;
+        font-size: 15px;
         line-height: 1.45;
     }
 
@@ -387,8 +391,8 @@ button:hover {
     }
 
     .page2-title {
-        top: 5px;
-        font-size: 10px;
+        top: 20px;
+        font-size: 25px;
     }
 
     .page2-text-left,
@@ -399,7 +403,7 @@ button:hover {
         right: auto;
         width: 85%;
         margin: 30px auto;
-        font-size: 4px;
+        font-size: 22px;
         line-height: 1.9;
         text-align: center;
     }
@@ -559,8 +563,8 @@ button:hover {
         left: auto;
         transform: none;
         width: 90%;
-        margin: 15px auto;
-        font-size: 10px;
+        margin: 35px auto;
+        font-size: 27px;
     }
 
     .page3-text-left,
@@ -735,7 +739,7 @@ button:hover {
         transform: none;
         width: 90%;
         margin: 30px auto;
-        font-size: 10px;
+        font-size: 27px;
     }
 
     .page4-text-left,
@@ -910,8 +914,8 @@ button:hover {
         left: auto;
         transform: none;
         width: 90%;
-        margin: 10px auto;
-        font-size: 10px;
+        margin: 30px auto;
+        font-size: 27px;
     }
 
     .page5-text-left,
@@ -1011,9 +1015,9 @@ button:hover {
 
 @media (max-width: 600px) {
     .page6-heading {
-        top: 10px;
+        top: 25px;
         width: 94%;
-        font-size: 10px;
+        font-size: 25px;
     }
 
     .page6-previous-button,
@@ -1958,6 +1962,153 @@ body.page-leaving {
     }
 
     .page15-next-button {
+        right: 15px;
+    }
+}
+
+
+
+/* ================= PAGE 16 ================= */
+
+.page16-body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #17131a;
+    background-image: url("/static/images/page16.jpeg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    overflow-x: hidden;
+}
+
+.page16-container {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.page16-heading {
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    margin: 0;
+    text-align: center;
+    font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    font-size: 34px;
+    font-weight: bold;
+    font-style: italic;
+    color: #fff3df;
+    text-shadow: 2px 2px 6px #000000;
+}
+
+.page16-previous-button,
+.page16-next-button {
+    position: absolute;
+    bottom: 30px;
+    padding: 12px 25px;
+    background: rgba(30, 20, 30, 0.8);
+    color: #fff3df;
+    text-decoration: none;
+    border: 1px solid #fff3df;
+    border-radius: 25px;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.page16-previous-button {
+    left: 30px;
+}
+
+.page16-next-button {
+    right: 30px;
+}
+
+@media (max-width: 600px) {
+    .page16-heading {
+        top: 25px;
+        width: 94%;
+        font-size: 25px;
+    }
+
+    .page16-previous-button,
+    .page16-next-button {
+        bottom: 20px;
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+
+    .page16-previous-button {
+        left: 15px;
+    }
+
+    .page16-next-button {
+        right: 15px;
+    }
+}
+
+
+/* ================= PAGE 17 ================= */
+
+.page17-body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #17131a;
+    background-image: url("/static/images/page17.jpeg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    overflow-x: hidden;
+}
+
+.page17-container {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.page17-previous-button,
+.page17-next-button {
+    position: absolute;
+    bottom: 30px;
+    padding: 12px 25px;
+    background: rgba(30, 20, 30, 0.8);
+    color: #fff3df;
+    text-decoration: none;
+    border: 1px solid #fff3df;
+    border-radius: 25px;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.page17-previous-button {
+    left: 30px;
+}
+
+.page17-next-button {
+    right: 30px;
+}
+
+@media (max-width: 600px) {
+    .page17-previous-button,
+    .page17-next-button {
+        bottom: 20px;
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+
+    .page17-previous-button {
+        left: 15px;
+    }
+
+    .page17-next-button {
         right: 15px;
     }
 }
